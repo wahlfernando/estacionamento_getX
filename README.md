@@ -8,3 +8,7 @@ O projeto foi desenvolvido com uma base de dados (API) em localhost, dessa forma
 
 Para saber mais sobre GetX veja o link 
 https://pub.dev/packages/get 
+
+
+<p align="center"> Visitas: </p>
+<p align="center">   <img alingn="center" src="https://profile-counter.glitch.me/SeuPerfildoGitHub/count.svg" /></p>
