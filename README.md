@@ -11,4 +11,4 @@ https://pub.dev/packages/get
 
 
 <p align="center"> Visitas: </p>
-<p align="center">   <img alingn="center" src="https://profile-counter.glitch.me/SeuPerfildoGitHub/count.svg" /></p>
+<p align="center">   <img alingn="center" src="https://profile-counter.glitch.me/wahlfernando/count.svg" /></p>
