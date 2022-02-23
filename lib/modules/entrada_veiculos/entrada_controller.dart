@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
@@ -11,28 +10,23 @@ class EntradaVeiculosController extends GetxController {
   MaskTextInputFormatter txtHora =
       MaskTextInputFormatter(mask: '##:##', filter: {'#': RegExp(r'[0-9]')});
 
-  final TextEditingController placa_controller = TextEditingController();
-  final TextEditingController hr_entrada_controller = TextEditingController();
-  final TextEditingController hr_saida_controller = TextEditingController();
-  final TextEditingController vaga_controller = TextEditingController();
+  final TextEditingController placaController = TextEditingController();
+  final TextEditingController hrEntradaController = TextEditingController();
+  final TextEditingController hrSaidaController = TextEditingController();
+  final TextEditingController vagaController = TextEditingController();
 
   final GaragemRepository _garagemRepository;
 
   EntradaVeiculosController({required GaragemRepository garagemRepository})
       : _garagemRepository = garagemRepository;
 
-  @override
-  void onInit() {
-    // TODO: implement onInit
-    super.onInit();
-  }
 
   Future<void> inserirVeiculo() async {
     final garagemModel = GaragemModel(
-      placa: placa_controller.text,
-      horaEntrada: hr_entrada_controller.text,
-      horaSaida: hr_saida_controller.text,
-      vaga: vaga_controller.text,
+      placa: placaController.text,
+      horaEntrada: hrEntradaController.text,
+      horaSaida: hrEntradaController.text,
+      vaga: vagaController.text,
     );
 
     var orderPix = await _garagemRepository.createdEntrada(garagemModel);

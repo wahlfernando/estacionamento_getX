@@ -25,25 +25,25 @@ class EntradaVeiculosPage extends GetView<EntradaVeiculosController> {
                     children: [
                       GaragemTextFormField(
                         label: 'Placa',
-                        controller: controller.placa_controller,
+                        controller: controller.placaController,
                         uppercase: true,
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       GaragemTextFormField(
                         label: 'Hora Entrada',
-                        controller: controller.hr_entrada_controller,
+                        controller: controller.hrEntradaController,
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       GaragemTextFormField(
                         label: 'Hora Saída',
-                        controller: controller.hr_saida_controller,
+                        controller: controller.hrSaidaController,
                       ),
-                       SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       GaragemTextFormField(
                         label: 'Vaga',
-                        controller: controller.vaga_controller,
+                        controller: controller.vagaController,
                       ),
-                      Spacer(),
+                      const Spacer(),
                       GaragemButton(
                         label: 'Salvar',
                         onPressed: () {
@@ -51,7 +51,7 @@ class EntradaVeiculosPage extends GetView<EntradaVeiculosController> {
                         },
                         width: 350,
                       ),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       GaragemButton(
                         label: 'Cancelar',
                         onPressed: () {

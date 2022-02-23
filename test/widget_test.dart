@@ -1,30 +1,35 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility that Flutter provides. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+import 'package:controle_estacionamento/core/rest_client/rest_client.dart';
+import 'package:controle_estacionamento/models/garagem_model.dart';
+import 'package:controle_estacionamento/repositories/entradas/entradas_repository_impl.dart';
+import 'package:controle_estacionamento/repositories/vagas/vagas_repository.dart';
+import 'package:mockito/mockito.dart';
+import 'package:test/test.dart';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_test/flutter_test.dart';
-
-import 'package:controle_estacionamento/main.dart';
+class ClientSpy extends Mock implements VagasRepository {}
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  GaragemRepositoryImpl? sut;
+  RestClient? restClient;
+  GaragemModel? garagemModel;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+  setUp(() {
+    restClient = RestClient();
+    sut = GaragemRepositoryImpl(restClient: restClient!);
   });
+
+  garagemModel = GaragemModel(
+      placa: 'ABC1234',
+      horaEntrada: '12:00',
+      horaSaida: '17:50',
+      vaga: '150-A');
+
+  group('createdEntrada', () {
+    test('Shoult throw sever error if invalid method provider', () async {
+      final future = sut!.createdEntrada(garagemModel!);
+
+      expect(future, throwsA(throwsException));
+    });
+  });
+
+  
 }

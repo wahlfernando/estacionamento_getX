@@ -31,7 +31,6 @@ class GaragemMainApp extends StatelessWidget {
         ...HomeRoutes.routes,
         ...EntgradaVeiculosRoutes.routes,
         ...ListaVeiculosRoutes.routes,
-
       ]
     );
   }

@@ -12,8 +12,8 @@ import '../../models/vagas_model.dart';
 class ListaVeiculosController extends GetxController {
   final formKey = GlobalKey<FormState>();
 
-  GaragemRepository _garagemRepository;
-  VagasRepository _vagasRepository;
+  final GaragemRepository _garagemRepository;
+  final VagasRepository _vagasRepository;
 
   ListaVeiculosController({
     required GaragemRepository garagemRepository,
@@ -23,13 +23,9 @@ class ListaVeiculosController extends GetxController {
 
   final _loading = false.obs;
   final _message = Rxn<MessageModel>();
-  final vagas_disponiveis = <VagasModel>[].obs;
+  final vagasDisponiveis = <VagasModel>[].obs;
   final veiculos = <GaragemModel>[].obs;
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
   @override
   void onReady() async {
@@ -64,7 +60,7 @@ class ListaVeiculosController extends GetxController {
   Future<void> listVagas() async {
     final vagas = await _vagasRepository.findAll();
 
-    vagas_disponiveis.assignAll(vagas);
+    vagasDisponiveis.assignAll(vagas);
   }
 
   Future<void> listVeiculos() async {

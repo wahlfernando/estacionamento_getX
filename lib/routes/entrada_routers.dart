@@ -5,7 +5,6 @@ import '../modules/entrada_veiculos/entrada_bindings.dart';
 import '../modules/entrada_veiculos/entrada_page.dart';
 
 
-
 class EntgradaVeiculosRoutes {
   EntgradaVeiculosRoutes._();
 

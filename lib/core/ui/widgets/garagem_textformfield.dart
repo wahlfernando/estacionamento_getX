@@ -9,14 +9,14 @@ class GaragemTextFormField extends StatelessWidget {
   final ValueChanged<String>? onChanged;
   final bool? uppercase;
 
-  const GaragemTextFormField({
+  const GaragemTextFormField({Key? key, 
     required this.label,
     this.controller,
     this.validator,
     this.onChanged,
     this.obscureText = false,
     this.uppercase = false
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

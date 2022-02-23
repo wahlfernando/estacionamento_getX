@@ -2,9 +2,6 @@ import 'package:controle_estacionamento/modules/splash/splash_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/ui/widgets/garagem_button.dart';
-
-
 class Splashpage extends GetView<SplashController> {
   const Splashpage({Key? key}) : super(key: key);
 

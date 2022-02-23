@@ -1,7 +1,6 @@
 import 'package:controle_estacionamento/modules/lista_veiculos/widget/veiculo_title.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
-import '../../core/ui/garagem_ui.dart';
 import '../../core/ui/widgets/garagem_appbar.dart';
 import 'lista_controller.dart';
 

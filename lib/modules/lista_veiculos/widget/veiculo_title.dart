@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../core/ui/garagem_ui.dart';
 import '../../../models/garagem_model.dart';
@@ -25,7 +24,7 @@ class VeiculoTitle extends StatelessWidget {
                 veiculo.placa!,
                 style: GaragemUi.textBoldBlue,
               ),
-              SizedBox(
+              const SizedBox(
                     height: 20,
                   ),
               Row(
@@ -36,7 +35,7 @@ class VeiculoTitle extends StatelessWidget {
                     veiculo.horaEntrada!,
                     style: GaragemUi.textBold,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Text(
@@ -45,7 +44,7 @@ class VeiculoTitle extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Text(
